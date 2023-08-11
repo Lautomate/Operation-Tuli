@@ -1,0 +1,200 @@
+@font-face {
+    font-family: Orig;
+    src: url('../src/YsabeauInfant-Regular.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Orig;
+    color: white;
+}
+
+
+body {
+    background-color: rgb(223, 217, 217);
+}
+
+
+header {
+    overflow: hidden;
+    position: relative;
+    height: 60vh;   
+    background: url('../src/test.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    /*background: linear-gradient(90deg, rgba(187,174,221,1) 0%, rgba(153,149,233,1) 0%, rgba(140,173,222,1) 0%, rgba(96,149,221,1) 0%, rgba(96,149,221,1) 29%, rgba(81,135,209,1) 77%);*/
+}
+
+.navigation_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 8px;
+}
+
+.navigation_container img {
+    width: 64px;
+    height: 64px;
+    margin-right: 60px;
+}
+
+.navigation_container p, .navigation_container button{
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.navigation_container p:hover {
+    color: rgb(235, 199, 199);
+    transition: 0.6s;
+}
+
+.navigation_container button {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px;
+}
+
+.navigation_container button:nth-of-type(1) {
+    border: 1px solid #327bac;
+}
+
+.navigation_container button:nth-of-type(2) {
+    background-color: #0f4061;
+}
+
+.navigation_container button:nth-of-type(1):hover {
+    background-color: #0f4061;
+}
+
+.details_container {
+    position: absolute;
+    left: 15%;
+    top: 35%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 20px;
+}
+
+.detail {
+    width: 50%;
+}
+
+.detail1 h3{
+    font-size: 30px;
+}
+
+.detail2 {
+    width: 29.5%;
+}
+
+.detail2 p {
+    text-align: justify;
+}
+
+.detail3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.detail3 button {
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.detail3 button:nth-of-type(1) {
+    background: linear-gradient(90deg, rgba(187,174,221,1) 0%, rgba(105,110,116,1) 0%, rgba(127,134,144,1) 0%, rgba(127,134,144,1) 33%, rgba(123,129,138,1) 48%, rgba(119,124,133,1) 61%);
+}
+
+.bottom_container {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.bottom_container > p {
+    color: rgb(26, 24, 24);
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.box_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(223, 217, 217);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    gap: 15px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 25%;
+    cursor: default;
+}
+
+.box img {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(211, 163, 163);
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.box p {
+    color: black;
+    text-align: center;
+}
+
+.box p:nth-of-type(1) {
+    font-size: 20px;
+}
+
+@keyframes slideToRight {
+    from {
+        opacity: 0;
+        transform: translate(-60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.box img:hover + p + p{
+    animation-name: slideToRight;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+.box img:not(:hover) + p + p{
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
+
